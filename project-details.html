@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Portfolio - Project Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#3F51B5", // Indigo 500
+                        "primary-dark": "#303F9F",
+                        "primary-light": "#C5CAE9", 
+                        "on-primary": "#FFFFFF",
+                        secondary: "#FF4081",
+                        surface: "#FFFFFF",
+                        background: "#FAFAFA",
+                        "text-high": "rgba(0, 0, 0, 0.87)",
+                        "text-medium": "rgba(0, 0, 0, 0.60)",
+                        "text-disabled": "rgba(0, 0, 0, 0.38)", 
+                        outline: "#E0E0E0",
+                        
+                        // MD Compatibility
+                        "md-background": "#FAFAFA",
+                        "md-surface": "#FFFFFF",
+                        "md-primary": "#3F51B5",
+                        "md-primary-dark": "#303F9F",
+                        "md-primary-light": "#C5CAE9",
+                        "md-secondary": "#FF4081",
+                        "md-text-high": "rgba(0, 0, 0, 0.87)",
+                        "md-text-medium": "rgba(0, 0, 0, 0.60)",
+                        "md-divider": "rgba(0, 0, 0, 0.12)",
+                        "primary-button": "#1A73E8",
+                        "primary-button-hover": "#1557B0",
+                    },
+                    fontFamily: {
+                        "sans": ["Roboto", "sans-serif"],
+                        "mono": ["Roboto Mono", "monospace"],
+                    },
+                    borderRadius: {
+                        "xl": "12px",
+                        "2xl": "16px",
+                        "3xl": "24px",
+                    },
+                    boxShadow: {
+                        'elevation-1': '0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15)',
+                        'elevation-2': '0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15)',
+                        'elevation-3': '0 4px 8px 3px rgba(60,64,67,0.15), 0 1px 3px 0 rgba(60,64,67,0.3)',
+                        // Compatibility for project-details.html
+                        "md-elevation-1": "0px 1px 2px 0px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15)",
+                        "md-elevation-2": "0px 1px 2px 0px rgba(60, 64, 67, 0.3), 0px 2px 6px 2px rgba(60, 64, 67, 0.15)",
+                    },
+                    animation: {
+                        'fade-in': 'fadeIn 0.5s ease-out forwards',
+                        'slide-up': 'slideUp 0.6s cubic-bezier(0.2, 0.0, 0, 1.0) forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0' },
+                            '100%': { opacity: '1' },
+                        },
+                        slideUp: {
+                            '0%': { opacity: '0', transform: 'translateY(20px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                },
+            },
+        }
+    </script>
+    <style>
+        .ripple-surface { position: relative; overflow: hidden; transform: translate3d(0, 0, 0); }
+        .ripple-surface::after { content: ""; display: block; position: absolute; width: 100%; height: 100%; top: 0; left: 0; pointer-events: none; background-image: radial-gradient(circle, #fff 10%, transparent 10.01%); background-repeat: no-repeat; background-position: 50%; transform: scale(10, 10); opacity: 0; transition: transform .5s, opacity 1s; }
+        .ripple-surface:active::after { transform: scale(0, 0); opacity: 0.2; transition: 0s; }
+        .ripple-surface-dark::after { background-image: radial-gradient(circle, #000 10%, transparent 10.01%); }
+    </style>
+</head>
+<body class="bg-md-background min-h-screen flex flex-col text-md-text-high antialiased selection:bg-md-primary-light selection:text-md-primary-dark">
+<nav class="sticky top-0 z-50 w-full bg-md-surface/95 backdrop-blur-sm shadow-elevation-2 transition-shadow duration-300">
+<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
+<div class="flex items-center gap-4">
+<button id="mobile-menu-btn" class="flex md:hidden text-md-text-medium ripple-surface ripple-surface-dark p-2 rounded-full">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex items-center gap-2">
+<a href="/" class="flex items-center gap-2 group">
+<div class="flex size-10 items-center justify-center rounded-full bg-md-primary text-white shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<span class="text-xl font-medium tracking-wide text-md-text-high group-hover:text-md-primary transition-colors">Abdul<span class="text-md-primary">.Dev</span></span>
+</a>
+</div>
+</div>
+<div class="hidden items-center gap-1 md:flex">
+<a class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-md-text-medium hover:bg-black/5 rounded hover:text-md-primary transition-colors ripple-surface ripple-surface-dark" href="/about">About</a>
+<a class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-md-text-medium hover:bg-black/5 rounded hover:text-md-primary transition-colors ripple-surface ripple-surface-dark" href="/portfolio">Work</a>
+<a class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-md-text-medium hover:bg-black/5 rounded hover:text-md-primary transition-colors ripple-surface ripple-surface-dark" href="/skills">Skills</a>
+<a class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-md-text-medium hover:bg-black/5 rounded hover:text-md-primary transition-colors ripple-surface ripple-surface-dark" href="/contact">Contact</a>
+<div class="ml-4">
+<a href="assets/Abdul's Resume.pdf" download="Abdul's Resume.pdf" class="flex items-center gap-2 px-5 py-2 rounded-full bg-md-primary hover:bg-md-primary-dark text-white shadow-elevation-2 hover:shadow-elevation-4 active:shadow-elevation-1 transition-all text-sm font-medium ripple-surface tracking-wide">
+<span>Resume</span>
+<span class="material-symbols-outlined text-[18px]">download</span>
+</a>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden bg-md-surface border-t border-md-divider">
+<div class="space-y-1 px-4 pb-3 pt-2">
+<a href="/about" class="block rounded-md px-3 py-2 text-base font-medium text-md-text-medium hover:bg-black/5 hover:text-md-primary">About</a>
+<a href="/portfolio" class="block rounded-md px-3 py-2 text-base font-medium text-md-text-medium hover:bg-black/5 hover:text-md-primary">Work</a>
+<a href="/skills" class="block rounded-md px-3 py-2 text-base font-medium text-md-text-medium hover:bg-black/5 hover:text-md-primary">Skills</a>
+<a href="/contact" class="block rounded-md px-3 py-2 text-base font-medium text-md-text-medium hover:bg-black/5 hover:text-md-primary">Contact</a>
+</div>
+</div>
+</nav>
+<main class="flex-grow w-full max-w-6xl mx-auto px-4 md:px-6 py-8 md:py-12">
+<div class="mb-8 animate-slide-up" style="animation-delay: 0ms;">
+<a class="inline-flex items-center gap-2 pl-3 pr-5 py-2 rounded-full text-md-text-medium hover:text-md-primary hover:bg-md-background transition-all ripple-surface group" href="/portfolio">
+<span class="material-symbols-outlined text-[20px] group-hover:-translate-x-1 transition-transform">arrow_back</span>
+<span class="text-sm font-medium">Back to Projects</span>
+</a>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12 mb-16">
+<div class="lg:col-span-12 animate-slide-up" style="animation-delay: 100ms;">
+<div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6 mb-6">
+<div>
+<h1 class="text-4xl md:text-5xl lg:text-6xl font-normal text-md-text-high mb-4 tracking-tight">Analytics Dashboard</h1>
+<p class="text-xl text-md-text-medium font-light max-w-3xl leading-relaxed">
+                            A high-performance real-time data visualization platform handling complex sales streams with sub-second latency for enterprise clients.
+                        </p>
+</div>
+<div class="flex gap-3 shrink-0 mt-2">
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-full bg-md-primary text-white text-sm font-medium hover:bg-primary-dark shadow-elevation-1 hover:shadow-elevation-2 transition-all ripple-surface">
+<span class="material-symbols-outlined text-[18px]">open_in_new</span>
+                            Live Demo
+                        </button>
+<button class="flex items-center gap-2 px-6 py-2.5 rounded-full border border-outline text-md-primary text-sm font-medium hover:bg-md-primary/5 hover:border-md-primary transition-all ripple-surface">
+<span class="material-symbols-outlined text-[18px]">code</span>
+                            Source
+                        </button>
+</div>
+</div>
+<div class="flex flex-wrap gap-3 mb-8">
+<span class="inline-flex items-center px-4 py-1.5 rounded-lg text-sm font-medium bg-md-primary-light text-md-primary-dark shadow-sm border border-transparent">
+<span class="w-2 h-2 rounded-full bg-md-primary-dark mr-2"></span>
+                        React.js
+                    </span>
+<span class="inline-flex items-center px-4 py-1.5 rounded-lg text-sm font-medium bg-md-primary-light text-md-primary-dark shadow-sm border border-transparent">
+<span class="w-2 h-2 rounded-full bg-md-primary-dark mr-2"></span>
+                        Node.js
+                    </span>
+<span class="inline-flex items-center px-4 py-1.5 rounded-lg text-sm font-medium bg-md-primary-light text-md-primary-dark shadow-sm border border-transparent">
+<span class="w-2 h-2 rounded-full bg-md-primary-dark mr-2"></span>
+                        D3.js
+                    </span>
+<span class="inline-flex items-center px-4 py-1.5 rounded-lg text-sm font-medium bg-md-background text-md-text-medium shadow-sm border border-outline">
+                        WebSocket
+                    </span>
+<span class="inline-flex items-center px-4 py-1.5 rounded-lg text-sm font-medium bg-md-background text-md-text-medium shadow-sm border border-outline">
+                        MongoDB
+                    </span>
+</div>
+</div>
+<div class="lg:col-span-12 animate-slide-up" style="animation-delay: 200ms;">
+<div class="rounded-3xl overflow-hidden bg-md-background shadow-elevation-1 border border-outline/20">
+<div class="relative w-full aspect-[16/9] md:aspect-[21/9] overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 hover:scale-105 cursor-zoom-in" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBzsIAayw5XosKG-if3aRxN5tpsBUM1AsegMqFgUnUt6S3ZlC4T9Em9YF13vmGlDMKUvY8x-Y17N87hYltOzntR2pefwTrp9kpCAN1Mq-r2HaOusg0cJzXNFGUVq2bl8-S2RjiHc6rw9Khp3BVvW3OD8ACf8nwWv4oiEBxNpCMO01djNhcJ7Ial4lfQTYWpXjKuYYvDr544uSenEQIMPZQOSrMZ2DjK9r68DgFJHojV53HC1FFSyq2X-keMV7l8vZlGoQ0CyvEAA0Er");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
+</div>
+<div class="flex items-center gap-4 p-4 bg-white border-t border-gray-100 overflow-x-auto">
+<button class="relative w-24 h-16 rounded-lg overflow-hidden ring-2 ring-md-primary ring-offset-2 flex-shrink-0">
+<img class="w-full h-full object-cover opacity-100" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzsIAayw5XosKG-if3aRxN5tpsBUM1AsegMqFgUnUt6S3ZlC4T9Em9YF13vmGlDMKUvY8x-Y17N87hYltOzntR2pefwTrp9kpCAN1Mq-r2HaOusg0cJzXNFGUVq2bl8-S2RjiHc6rw9Khp3BVvW3OD8ACf8nwWv4oiEBxNpCMO01djNhcJ7Ial4lfQTYWpXjKuYYvDr544uSenEQIMPZQOSrMZ2DjK9r68DgFJHojV53HC1FFSyq2X-keMV7l8vZlGoQ0CyvEAA0Er"/>
+</button>
+<button class="relative w-24 h-16 rounded-lg overflow-hidden hover:opacity-100 opacity-60 transition-opacity flex-shrink-0 group">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5EZOeqB2UFRSGgsFT33yjHrC61HGkp-CX_O2hEIVZpcWahxNPee43Zg7fHf3_Pl732NlqfTMVNqtiTa75V4NWJ-5wZAjN3c-0LWMMJddWB-bGHjUsl6KKO4Bo87nPHz7jt5blAreSfjjOT1hbh1rLLTWdmn8NpWUEdbfcXhrAN3dk5WQbBivkZokKHHSGxyMttT-Bem9i2g95hmyQimWGPKyXWsN8-2t7jEZOn3kT5H9lEDN4MHBTlBX1cniYfQjwXMANDAWRNs7F"/>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+</button>
+<button class="relative w-24 h-16 rounded-lg overflow-hidden hover:opacity-100 opacity-60 transition-opacity flex-shrink-0 group">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA0xJt40SRCGouHWDODTsmMTawlfmuwpHAQHG9OF9kOPtS7rRGxCGIJRzt0Cm4UUSEFmF09k9rZaPOnhwzgi6l2JQMcmS-t7TyXFXAYD5IT2AxKPv88UrW4kB5Sq43mMHado0otmIJ4oAqCK35MaGHDAm8JmNHMSYC_N34owxcj2HjuKga3bYjGwhRO1hf1PU83azJlQotYzG_SBTOoNdCSWVYIXFIRcg1UIJjcfb1NE5hWTrY_8jf26y54VjYtxw8_BlcjPJLy2xZy"/>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+</button>
+<button class="relative w-24 h-16 rounded-lg overflow-hidden hover:opacity-100 opacity-60 transition-opacity flex-shrink-0 group">
+<img class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB01FZAplao8ekqFoa8Lisie1QBdZG8vpxGBiigHkCyoWKLUcSua7YerJgZmul_VScffHUtFuPwBqZEWKGD2U0fFdm3ECUSDF0iLUVVyesycOA6c4p8MsunfPqq8tzn1LnTSxSudIT7_xO2ktezJnHxCmx1Mh0zpybKXfNzN1rYvfz3mmazCNhAEls1txI6CGM12ZfpAnmxTW3p_gcSlXSZ71lz1jIB_czYPbJ3zbzGKB1QX6L0mu1xfPnKQcxPkSFM1ahhT_pp9XTV"/>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+</button>
+</div>
+</div>
+</div>
+<div class="lg:col-span-8 space-y-12 animate-slide-up" style="animation-delay: 300ms;">
+<section>
+<h2 class="text-2xl font-normal text-md-text-high mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-md-primary">description</span>
+                        About the Project
+                    </h2>
+<div class="prose prose-lg text-md-text-medium max-w-none">
+<p class="mb-4">
+                            In today's fast-paced market, businesses require immediate insights to make informed decisions. This Analytics Dashboard was conceived to bridge the gap between raw data streams and actionable intelligence.
+                        </p>
+<p class="mb-4">
+                            The application aggregates data from multiple sources including sales points, inventory databases, and user activity logs. Using a custom Node.js middleware, data is processed and piped via WebSockets to the frontend, ensuring that the visual metrics update within milliseconds of a real-world event.
+                        </p>
+<p>
+                            We prioritized a clean, distraction-free interface (using Material Design principles) to allow analysts to focus on trends rather than navigating complex menus.
+                        </p>
+</div>
+</section>
+<section>
+<h2 class="text-2xl font-normal text-md-text-high mb-6 flex items-center gap-3">
+<span class="material-symbols-outlined text-md-primary">stars</span>
+                        Key Features
+                    </h2>
+<div class="grid md:grid-cols-2 gap-6">
+<div class="p-4 rounded-xl border border-outline/40 hover:border-md-primary/30 transition-colors bg-white hover:bg-gray-50">
+<div class="size-10 rounded-full bg-md-primary-light text-md-primary-dark flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">sync</span>
+</div>
+<h3 class="font-medium text-lg text-md-text-high mb-2">Real-time Synchronization</h3>
+<p class="text-sm text-md-text-medium leading-relaxed">WebSocket integration ensures data reflects the current state across all connected clients instantly.</p>
+</div>
+<div class="p-4 rounded-xl border border-outline/40 hover:border-md-primary/30 transition-colors bg-white hover:bg-gray-50">
+<div class="size-10 rounded-full bg-md-primary-light text-md-primary-dark flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">bar_chart</span>
+</div>
+<h3 class="font-medium text-lg text-md-text-high mb-2">Interactive Visualizations</h3>
+<p class="text-sm text-md-text-medium leading-relaxed">Deeply interactive charts built with D3.js allowing zooming, panning, and detailed tooltip inspection.</p>
+</div>
+<div class="p-4 rounded-xl border border-outline/40 hover:border-md-primary/30 transition-colors bg-white hover:bg-gray-50">
+<div class="size-10 rounded-full bg-md-primary-light text-md-primary-dark flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">file_download</span>
+</div>
+<h3 class="font-medium text-lg text-md-text-high mb-2">Automated Reporting</h3>
+<p class="text-sm text-md-text-medium leading-relaxed">Scheduled PDF and CSV export generation distributed via email to stakeholders.</p>
+</div>
+<div class="p-4 rounded-xl border border-outline/40 hover:border-md-primary/30 transition-colors bg-white hover:bg-gray-50">
+<div class="size-10 rounded-full bg-md-primary-light text-md-primary-dark flex items-center justify-center mb-4">
+<span class="material-symbols-outlined">lock</span>
+</div>
+<h3 class="font-medium text-lg text-md-text-high mb-2">Role-Based Access</h3>
+<p class="text-sm text-md-text-medium leading-relaxed">Granular permission settings for admins, editors, and viewers to secure sensitive data.</p>
+</div>
+</div>
+</section>
+</div>
+<div class="lg:col-span-4 space-y-8 animate-slide-up" style="animation-delay: 400ms;">
+<div class="bg-md-surface rounded-xl shadow-elevation-1 p-6 border border-outline/20 relative overflow-hidden">
+<div class="absolute top-0 right-0 p-4 opacity-5">
+<span class="material-symbols-outlined text-[100px]">psychology</span>
+</div>
+<h3 class="text-lg font-medium text-md-text-high mb-4 flex items-center gap-2 relative z-10">
+<span class="material-symbols-outlined text-md-primary">build</span> 
+                        Technical Challenges
+                    </h3>
+<div class="space-y-4 relative z-10">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-md-primary shrink-0 text-sm mt-1">check_circle</span>
+<div>
+<h4 class="text-sm font-bold text-md-text-high">Data Latency</h4>
+<p class="text-sm text-md-text-medium mt-1">Optimizing the WebSocket payload size was crucial. We implemented Protobuf serialization to reduce packet size by 40%.</p>
+</div>
+</div>
+<div class="w-full h-px bg-gray-100"></div>
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-md-primary shrink-0 text-sm mt-1">check_circle</span>
+<div>
+<h4 class="text-sm font-bold text-md-text-high">DOM Performance</h4>
+<p class="text-sm text-md-text-medium mt-1">Rendering 10,000+ points on a scatter plot caused jank. Switching to Canvas-based rendering for dense charts solved the bottleneck.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-white rounded-xl p-6 border border-outline/30">
+<h3 class="text-xs font-bold text-md-text-medium uppercase tracking-wider mb-4">Project Details</h3>
+<div class="space-y-4">
+<div class="flex justify-between items-center">
+<span class="text-sm text-md-text-medium">Role</span>
+<span class="text-sm font-medium text-md-text-high">Lead Frontend Engineer</span>
+</div>
+<div class="w-full h-px bg-outline/20"></div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-md-text-medium">Timeline</span>
+<span class="text-sm font-medium text-md-text-high">Aug 2023 - Nov 2023</span>
+</div>
+<div class="w-full h-px bg-outline/20"></div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-md-text-medium">Team Size</span>
+<span class="text-sm font-medium text-md-text-high">4 Developers</span>
+</div>
+<div class="w-full h-px bg-outline/20"></div>
+<div class="flex justify-between items-center">
+<span class="text-sm text-md-text-medium">Status</span>
+<span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                                Completed
+                            </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-16 pt-8 border-t border-gray-100 flex justify-between items-center animate-slide-up" style="animation-delay: 500ms;">
+<a class="group text-left p-4 rounded-xl hover:bg-gray-50 transition-colors max-w-xs" href="#">
+<span class="block text-xs text-md-on-surface-variant mb-1">Previous Project</span>
+<span class="text-lg font-medium text-md-on-surface group-hover:text-md-primary transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                    Nebula System
+                </span>
+</a>
+<a class="group text-right p-4 rounded-xl hover:bg-gray-50 transition-colors max-w-xs" href="#">
+<span class="block text-xs text-md-on-surface-variant mb-1">Next Project</span>
+<span class="text-lg font-medium text-md-on-surface group-hover:text-md-primary transition-colors flex items-center gap-2">
+                    Pocket Finance
+                    <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</span>
+</a>
+</div>
+</main>
+<footer class="w-full bg-surface border-t border-outline py-8 mt-auto">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center text-white font-bold text-xs shadow-sm">
+                    AH
+                </div>
+<p class="text-sm text-text-medium">© 2025 Abdul Hanan. All rights reserved.</p>
+</div>
+<div class="flex gap-8">
+<a class="text-text-disabled hover:text-primary transition-colors" href="https://www.linkedin.com/in/abdul-h-17b69623a/">
+<span class="sr-only">LinkedIn</span>
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" fill-rule="evenodd"></path></svg>
+</a>
+<a class="text-text-disabled hover:text-primary transition-colors" href="https://github.com/raohanan">
+<span class="sr-only">GitHub</span>
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" fill-rule="evenodd"></path></svg>
+</a>
+</div>
+</div>
+</footer>
+
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if(btn && menu) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+</script>
+</body></html>

@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<title>Skills &amp; Tech Stack - Material Design</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "md-primary": "#3F51B5", // Indigo 500 (Matched to index.html)
+                        "md-primary-dark": "#303F9F", // Indigo 700
+                        "md-text-high": "rgba(0, 0, 0, 0.87)",
+                        "md-text-medium": "rgba(0, 0, 0, 0.60)",
+                        "md-divider": "rgba(0, 0, 0, 0.12)",
+                        "primary-button": "#1A73E8",
+                        "primary-button-hover": "#1557B0",
+                        "md-primary-variant": "#1557B0",
+                        "md-secondary": "#E8F0FE", // Light Blue background for active states
+                        "md-background": "#F8F9FA", // Light Grey background
+                        "md-surface": "#FFFFFF",
+                        "md-text-primary": "#202124",
+                        "md-text-secondary": "#5F6368",
+                        "md-divider": "#DADCE0",
+                        "md-outline": "#747775",
+                        "md-success": "#1E8E3E",
+                    },
+                    fontFamily: {
+                        "sans": ["Roboto", "Inter", "sans-serif"],
+                        "mono": ["Roboto Mono", "monospace"],
+                    },
+                    boxShadow: {
+                        'md-1': '0 1px 2px 0 rgba(60,64,67,0.3), 0 1px 3px 1px rgba(60,64,67,0.15)',
+                        'md-2': '0 1px 2px 0 rgba(60,64,67,0.3), 0 2px 6px 2px rgba(60,64,67,0.15)',
+                        'md-hover': '0 4px 8px 3px rgba(60,64,67,0.15), 0 1px 3px 0 rgba(60,64,67,0.3)',
+                        'elevation-1': '0 2px 1px -1px rgba(0,0,0,0.2), 0 1px 1px 0 rgba(0,0,0,0.14), 0 1px 3px 0 rgba(0,0,0,0.12)',
+                        'elevation-2': '0 3px 1px -2px rgba(0,0,0,0.2), 0 2px 2px 0 rgba(0,0,0,0.14), 0 1px 5px 0 rgba(0,0,0,0.12)',
+                        'elevation-4': '0 2px 4px -1px rgba(0,0,0,0.2), 0 4px 5px 0 rgba(0,0,0,0.14), 0 1px 10px 0 rgba(0,0,0,0.12)',
+                        'elevation-8': '0 5px 5px -3px rgba(0,0,0,0.2), 0 8px 10px 1px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12)',
+                        'elevation-16': '0 8px 10px -5px rgba(0,0,0,0.2), 0 16px 24px 2px rgba(0,0,0,0.14), 0 6px 30px 5px rgba(0,0,0,0.12)',
+                    }
+                },
+            },
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;family=Roboto+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F8F9FA;
+            color: #202124;
+        }
+        .md-card {
+            transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .md-card:hover {
+            box-shadow: 0 4px 8px 3px rgba(60,64,67,0.15), 0 1px 3px 0 rgba(60,64,67,0.3);
+            transform: translateY(-2px);
+        }
+        .md-chip {
+            transition: background-color 0.2s, box-shadow 0.2s, color 0.2s;
+        }
+        .md-chip:hover {
+            background-color: #E8F0FE;color: #1A73E8;border-color: #1A73E8;
+            box-shadow: 0 1px 2px 0 rgba(60,64,67,0.3);
+        }::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #F5F5F5;
+        }
+        ::-webkit-scrollbar-thumb {
+            background-color: #DADCE0;
+            border-radius: 20px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background-color: #BDC1C6;
+        }
+        .ripple-surface { position: relative; overflow: hidden; transform: translate3d(0, 0, 0); }
+        .ripple-surface::after { content: ""; display: block; position: absolute; width: 100%; height: 100%; top: 0; left: 0; pointer-events: none; background-image: radial-gradient(circle, #fff 10%, transparent 10.01%); background-repeat: no-repeat; background-position: 50%; transform: scale(10, 10); opacity: 0; transition: transform .5s, opacity 1s; }
+        .ripple-surface:active::after { transform: scale(0, 0); opacity: 0.2; transition: 0s; }
+        .ripple-surface-dark::after { background-image: radial-gradient(circle, #000 10%, transparent 10.01%); }
+    </style>
+</head>
+<body class="antialiased selection:bg-md-primary/20 selection:text-md-primary-variant">
+<nav class="sticky top-0 z-50 w-full bg-md-surface/95 backdrop-blur-sm shadow-elevation-2 transition-shadow duration-300">
+<div class="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 lg:px-8">
+<div class="flex items-center gap-4">
+<button id="mobile-menu-btn" class="flex md:hidden text-md-text-medium ripple-surface ripple-surface-dark p-2 rounded-full">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<div class="flex items-center gap-2">
+<a href="/" class="flex items-center gap-2 group">
+<div class="flex size-10 items-center justify-center rounded-full bg-md-primary text-white shadow-sm group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">terminal</span>
+</div>
+<span class="text-xl font-medium tracking-wide text-md-text-high group-hover:text-md-primary transition-colors">Abdul<span class="text-md-primary">.Dev</span></span>
+</a>
+</div>
+</div>
+<div class="hidden items-center gap-1 md:flex">
+<a class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-md-text-medium hover:bg-black/5 rounded hover:text-md-primary transition-colors ripple-surface ripple-surface-dark" href="/about">About</a>
+<a class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-md-text-medium hover:bg-black/5 rounded hover:text-md-primary transition-colors ripple-surface ripple-surface-dark" href="/portfolio">Work</a>
+<a class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-md-text-medium hover:bg-black/5 rounded hover:text-md-primary transition-colors ripple-surface ripple-surface-dark" href="/skills">Skills</a>
+<a class="px-4 py-2 text-sm font-medium uppercase tracking-wider text-md-text-medium hover:bg-black/5 rounded hover:text-md-primary transition-colors ripple-surface ripple-surface-dark" href="/contact">Contact</a>
+<div class="ml-4">
+<a href="assets/Abdul's Resume.pdf" download="Abdul's Resume.pdf" class="flex items-center gap-2 px-5 py-2 rounded-full bg-md-primary hover:bg-md-primary-dark text-white shadow-elevation-2 hover:shadow-elevation-4 active:shadow-elevation-1 transition-all text-sm font-medium ripple-surface tracking-wide">
+<span>Resume</span>
+<span class="material-symbols-outlined text-[18px]">download</span>
+</a>
+</div>
+</div>
+</div>
+<div id="mobile-menu" class="hidden md:hidden bg-md-surface border-t border-md-divider">
+<div class="space-y-1 px-4 pb-3 pt-2">
+<a href="/about" class="block rounded-md px-3 py-2 text-base font-medium text-md-text-medium hover:bg-black/5 hover:text-md-primary">About</a>
+<a href="/portfolio" class="block rounded-md px-3 py-2 text-base font-medium text-md-text-medium hover:bg-black/5 hover:text-md-primary">Work</a>
+<a href="/skills" class="block rounded-md px-3 py-2 text-base font-medium text-md-text-medium hover:bg-black/5 hover:text-md-primary">Skills</a>
+<a href="/contact" class="block rounded-md px-3 py-2 text-base font-medium text-md-text-medium hover:bg-black/5 hover:text-md-primary">Contact</a>
+</div>
+</div>
+</nav>
+<main class="w-full flex flex-col items-center">
+<section class="w-full max-w-7xl px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+<div class="flex flex-col items-start gap-6 max-w-4xl">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-md-secondary text-md-primary text-sm font-medium border border-transparent">
+<span class="material-symbols-outlined text-lg">auto_awesome</span>
+<span>Expertise &amp; Toolset</span>
+</div>
+<h1 class="text-4xl md:text-5xl font-normal text-md-text-primary tracking-tight leading-tight">
+                    Building digital experiences with <span class="text-md-primary font-medium">precision</span> and <span class="text-md-primary font-medium">purpose</span>.
+                </h1>
+<p class="text-lg text-md-text-secondary leading-relaxed max-w-2xl font-light">
+                    Leveraging a comprehensive suite of modern technologies to engineer scalable, user-centric solutions. Here is a breakdown of my technical proficiency.
+                </p>
+</div>
+</section>
+<section class="w-full max-w-6xl px-4 sm:px-6 lg:px-8 pb-16">
+<div class="flex items-center gap-2 mb-8">
+<span class="material-symbols-outlined text-md-text-secondary">dashboard</span>
+<h2 class="text-xl font-medium text-md-text-primary">Core Competencies</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="md-card bg-md-surface rounded-2xl p-6 border border-md-divider flex flex-col gap-4 relative overflow-hidden group cursor-default">
+<div class="absolute top-0 left-0 w-full h-1 bg-md-divider group-hover:bg-md-primary transition-colors duration-300"></div>
+<div class="w-12 h-12 rounded-xl bg-md-secondary flex items-center justify-center text-md-primary">
+<span class="material-symbols-outlined text-2xl">html</span>
+</div>
+<div>
+<h3 class="text-lg font-medium text-md-text-primary mb-2">Frontend Engineering</h3>
+<p class="text-md-text-secondary text-sm leading-relaxed">
+                            Crafting responsive, accessible interfaces using the React ecosystem. Focused on component reusability, state management, and seamless micro-interactions.
+                        </p>
+</div>
+</div>
+<div class="md-card bg-md-surface rounded-2xl p-6 border border-md-divider flex flex-col gap-4 relative overflow-hidden group cursor-default">
+<div class="absolute top-0 left-0 w-full h-1 bg-md-divider group-hover:bg-md-primary transition-colors duration-300"></div>
+<div class="w-12 h-12 rounded-xl bg-md-secondary flex items-center justify-center text-md-primary">
+<span class="material-symbols-outlined text-2xl">dns</span>
+</div>
+<div>
+<h3 class="text-lg font-medium text-md-text-primary mb-2">Backend Architecture</h3>
+<p class="text-md-text-secondary text-sm leading-relaxed">
+                            Designing robust APIs and data schemas. Experienced with Node.js runtimes, GraphQL federation, and SQL/NoSQL database optimization for scale.
+                        </p>
+</div>
+</div>
+<div class="md-card bg-md-surface rounded-2xl p-6 border border-md-divider flex flex-col gap-4 relative overflow-hidden group cursor-default">
+<div class="absolute top-0 left-0 w-full h-1 bg-md-divider group-hover:bg-md-primary transition-colors duration-300"></div>
+<div class="w-12 h-12 rounded-xl bg-md-secondary flex items-center justify-center text-md-primary">
+<span class="material-symbols-outlined text-2xl">design_services</span>
+</div>
+<div>
+<h3 class="text-lg font-medium text-md-text-primary mb-2">UX Design</h3>
+<p class="text-md-text-secondary text-sm leading-relaxed">
+    Creating intuitive, user-centered designs that enhance usability and accessibility. Focusing on smooth interactions and visual consistency across all devices.
+</p>
+</div>
+</div>
+</div>
+</section>
+<section class="w-full bg-md-surface border-t border-md-divider py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center gap-2 mb-10">
+<span class="material-symbols-outlined text-md-text-secondary">category</span>
+<h2 class="text-xl font-medium text-md-text-primary">Technology Inventory</h2>
+</div>
+<div class="flex flex-col gap-12">
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+<div class="md:col-span-3">
+<h3 class="text-lg font-medium text-md-text-primary">Frontend</h3>
+<p class="text-sm text-md-text-secondary mt-1">Client-side libraries &amp; frameworks</p>
+</div>
+<div class="md:col-span-9">
+<div class="flex flex-wrap gap-3">
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-[#61dafb] ring-1 ring-black/5">R</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">React</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-black ring-1 ring-black/5">N</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Next.js</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-red-500 ring-1 ring-black/5">A</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Angular</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-[#3178c6] ring-1 ring-black/5">TS</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">TypeScript</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-[#f1e05a] ring-1 ring-black/5">JS</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">JavaScript</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-black ring-1 ring-black/5">A</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Axios</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-[#38bdf8] ring-1 ring-black/5">TW</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Tailwind</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-[#38bdf8] ring-1 ring-black/5">Mi</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Material UI</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-black ring-1 ring-black/5">SN</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">ShadCN UI</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-[#cf649a] ring-1 ring-black/5">SC</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Sass</span>
+</div>
+</div>
+</div>
+</div>
+<div class="h-px w-full bg-md-divider/50"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+<div class="md:col-span-3">
+<h3 class="text-lg font-medium text-md-text-primary">Backend</h3>
+<p class="text-sm text-md-text-secondary mt-1">Server logic &amp; databases</p>
+</div>
+<div class="md:col-span-9">
+<div class="flex flex-wrap gap-3">
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-[#68a063] ring-1 ring-black/5">N</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Node.js</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-[#68a063] ring-1 ring-black/5">N</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Nest.js</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-green-500 ring-1 ring-black/5">MB</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">MongoDB</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-[#336791] ring-1 ring-black/5">PS</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">PostgreSQL</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-[#e10098] ring-1 ring-black/5">QL</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">GraphQL</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-green-400 ring-1 ring-black/5">SB</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Spring-Boot</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-orange-400 ring-1 ring-black/5">FB</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Firebase</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-xs font-bold text-green-600 ring-1 ring-black/5">SB</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Supabase</span>
+</div>
+</div>
+</div>
+</div>
+<div class="h-px w-full bg-md-divider/50"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8">
+<div class="md:col-span-3">
+<h3 class="text-lg font-medium text-md-text-primary">UX Design</h3>
+<p class="text-sm text-md-text-secondary mt-1">Design tools &amp; methodologies</p>
+</div>
+<div class="md:col-span-9">
+<div class="flex flex-wrap gap-3">
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-[#F24E1E] ring-1 ring-black/5">
+<span class="material-symbols-outlined text-[16px]">brush</span>
+</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Figma</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-[#FF61F6] ring-1 ring-black/5">
+<span class="material-symbols-outlined text-[16px]">edit_document</span>
+</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Adobe XD</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-[#F7B500] ring-1 ring-black/5">
+<span class="material-symbols-outlined text-[16px]">draw</span>
+</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Sketch And Ideating</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-blue-500 ring-1 ring-black/5">
+<span class="material-symbols-outlined text-[16px]">layers</span>
+</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Wireframing</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-indigo-500 ring-1 ring-black/5">
+<span class="material-symbols-outlined text-[16px]">touch_app</span>
+</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Prototyping</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-emerald-500 ring-1 ring-black/5">
+<span class="material-symbols-outlined text-[16px]">psychology</span>
+</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">Conducting Usability Studies</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-rose-500 ring-1 ring-black/5">
+<span class="material-symbols-outlined text-[16px]">palette</span>
+</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">User Experience Design (UXD)</span>
+</div>
+<div class="md-chip group flex items-center gap-3 pl-2 pr-4 py-2 rounded-lg border border-md-divider bg-md-background cursor-pointer select-none">
+<div class="w-6 h-6 rounded-full bg-white shadow-sm flex items-center justify-center text-cyan-500 ring-1 ring-black/5">
+<span class="material-symbols-outlined text-[16px]">search</span>
+</div>
+<span class="text-sm font-medium text-md-text-primary group-hover:text-md-primary">User Experience Research (UXR)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<footer class="w-full bg-md-background border-t border-md-divider py-8">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-md-text-secondary">
+<div class="flex items-center gap-2">
+<span class="block w-2.5 h-2.5 rounded-full bg-md-success shadow-sm"></span>
+<span>All systems operational</span>
+</div>
+<div class="flex items-center gap-4">
+<span>Designed with Material Design 3.0</span>
+<span class="h-4 w-px bg-md-divider"></span>
+<span>Updated: Dec 2025</span>
+</div>
+</div>
+</footer>
+</main>
+
+<script>
+    const btn = document.getElementById('mobile-menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    if(btn && menu) {
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+    }
+</script>
+</body></html>
