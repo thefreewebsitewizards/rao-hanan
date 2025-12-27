@@ -1,0 +1,593 @@
+[
+  {
+    "id": "ben-streetwear-crib",
+    "title": "BEN Streetwear Crib",
+    "shortDescription": "High-performance streetwear e-commerce platform with a modern fashion-first UX.",
+    "cardTech": ["React", "TypeScript", "Firebase"],
+    "homeImage": "projects/Ben-home-screen.PNG",
+    "images": [
+      "projects/Ben-home-screen.PNG",
+      "projects/Ben-admin.PNG",
+      "projects/Ben-all-products.PNG",
+      "projects/Ben-cart.PNG",
+      "projects/Ben-checkout.PNG",
+      "projects/Ben-our-collection.PNG",
+      "projects/Ben-products-managment.PNG"
+    ],
+    "details": {
+      "tagline": "A scalable, conversion-focused fashion e-commerce experience.",
+      "liveDemo": "https://ben-streetwear-crib.vercel.app/",
+      "source": null,
+      "stack": [
+        "React",
+        "TypeScript",
+        "Redux Toolkit",
+        "Context API",
+        "Tailwind CSS",
+        "shadCN UI",
+        "Firebase Auth",
+        "Firebase Firestore",
+        "Vercel"
+      ],
+      "about": "BEN Streetwear Crib is a full-stack e-commerce platform designed for modern fashion brands. The focus was on speed, usability, and clean visual hierarchy to maximize conversions.\n\nThe platform includes dynamic product listings, cart management, user authentication, and a scalable backend using Firebase. The UI was designed in Figma and implemented with Tailwind CSS and shadCN UI for a premium streetwear aesthetic.",
+      "features": [
+        {
+          "icon": "shopping_cart",
+          "title": "Full E-Commerce Flow",
+          "description": "Product browsing, cart management, and checkout-ready architecture."
+        },
+        {
+          "icon": "lock",
+          "title": "Secure Authentication",
+          "description": "Firebase-based authentication with protected user sessions."
+        },
+        {
+          "icon": "speed",
+          "title": "Optimized Performance",
+          "description": "Fast page loads and smooth interactions deployed on Vercel."
+        },
+        {
+          "icon": "design_services",
+          "title": "Rich UI/UX Design",
+          "description": "Intuitive navigation, clean layouts, and a focus on user engagement."
+        }
+      ],
+      "challenges": [
+        "State synchronization between Redux and Context API.",
+        "Maintaining consistent UX across responsive breakpoints."
+      ],
+      "meta": {
+        "role": "Full Stack Developer",
+        "timeline": "2024",
+        "teamSize": "Solo",
+        "status": "Completed"
+      }
+    }
+  },
+
+  {
+    "id": "margarita",
+    "title": "Margarita Fitness & Finance",
+    "shortDescription": "A dual-purpose platform combining fitness transformation tracking with financial planning.",
+    "cardTech": ["React", "TypeScript", "Firebase"],
+    "homeImage": "projects/Margarita-home-screen.PNG",
+    "images": [
+      "projects/Margarita-home-screen.PNG",
+      "projects/Margarita-about-grid.PNG",
+      "projects/Margarita-grid.PNG",
+      "projects/Margarita-newslatter.PNG",
+      "projects/Margarita-pillars-screen.PNG",
+      "projects/Margarita-portfolio.PNG",
+      "projects/Margarita-services-2.PNG",
+      "projects/Margarita-services.PNG",
+      "projects/Margarita-strategies.PNG",
+      "projects/Margarita-transformation.PNG"
+    ],
+    "details": {
+      "tagline": "Where personal finance meets physical transformation.",
+      "liveDemo": "https://margirita.vercel.app/",
+      "source": null,
+      "stack": [
+        "React",
+        "TypeScript",
+        "Redux Toolkit",
+        "Context API",
+        "Tailwind CSS",
+        "shadCN UI",
+        "Firebase",
+        "Figma",
+        "Vercel"
+      ],
+      "about": "Margarita is a full-stack platform designed to help users manage both their physical fitness goals and financial discipline in one ecosystem.\n\nThe system focuses on clarity, motivation, and structured user journeys, balancing analytical data with lifestyle-oriented UX patterns.",
+      "features": [
+        {
+          "icon": "fitness_center",
+          "title": "Fitness Progress Tracking",
+          "description": "User-centric dashboards for tracking workouts and transformation goals."
+        },
+        {
+          "icon": "account_balance",
+          "title": "Finance Planning",
+          "description": "Clear financial goal structuring with intuitive UI components."
+        },
+        {
+          "icon": "design_services",
+          "title": "Premium UI/UX",
+          "description": "Designed in Figma and implemented with a clean, modern aesthetic."
+        },
+        {
+          "icon": "insights",
+          "title": "Analytics Dashboard",
+          "description": "Visual data representation for financial and fitness growth."
+        }
+      ],
+      "challenges": [
+        "Balancing two distinct domains (fitness and finance) in one UX.",
+        "Ensuring scalability of shared state management."
+      ],
+      "meta": {
+        "role": "Full Stack Developer",
+        "timeline": "2025",
+        "teamSize": "Solo",
+        "status": "Completed"
+      }
+    }
+  },
+
+  {
+    "id": "kelsey-azure",
+    "title": "Kelsey Azure Portfolio",
+    "shortDescription": "High-end portfolio and collaboration platform for a social media model.",
+    "cardTech": ["React", "Tailwind", "Firebase"],
+    "homeImage": "projects/Kalsey-home-screen.PNG",
+    "images": [
+      "projects/Kalsey-home-screen.PNG",
+      "projects/Kalsey-collaboration.PNG",
+      "projects/Kalsey-lets-collab.PNG",
+      "projects/Kalsey-partnership.PNG",
+      "projects/Kalsey-portfolio.PNG",
+      "projects/Kalsey-services.PNG",
+      "projects/Kalsey-socials.PNG",
+      "projects/Kalsey-subscriptions.PNG",
+      "projects/Kalsey-workwithme.PNG"
+    ],
+    "details": {
+      "tagline": "A visually-driven portfolio designed for brand collaborations.",
+      "liveDemo": "https://kelsey-azure.vercel.app/",
+      "source": null,
+      "stack": [
+        "React",
+        "TypeScript",
+        "Redux",
+        "Tailwind CSS",
+        "shadCN UI",
+        "Firebase",
+        "Vercel"
+      ],
+      "about": "This project showcases a professional portfolio and service offering platform for a social media influencer. The design prioritizes visual storytelling, brand credibility, and conversion.\n\nIt includes collaboration inquiries, service highlights, and a polished editorial layout.",
+      "features": [
+        {
+          "icon": "photo_camera",
+          "title": "Visual-First Design",
+          "description": "Image-focused layouts optimized for engagement."
+        },
+        {
+          "icon": "handshake",
+          "title": "Collaboration Ready",
+          "description": "Clear CTAs for brand partnerships and services."
+        },
+        {
+          "icon": "devices",
+          "title": "Responsive Layout",
+          "description": "Seamless experience across desktop, tablet, and mobile devices."
+        },
+        {
+          "icon": "branding_watermark",
+          "title": "Brand Identity",
+          "description": "Consistent typography and color usage to reinforce personal branding."
+        }
+      ],
+      "challenges": [
+        "Maintaining visual quality without sacrificing performance.",
+        "Responsive design for media-heavy sections."
+      ],
+      "meta": {
+        "role": "Frontend & UX Designer",
+        "timeline": "2024",
+        "teamSize": "Solo",
+        "status": "Completed"
+      }
+    }
+  },
+
+  {
+    "id": "solo-leveling-manga",
+    "title": "Solo Leveling Manga Hub",
+    "shortDescription": "Anime-themed manga reading platform with immersive UI.",
+    "cardTech": ["React", "Node.js", "MongoDB"],
+    "homeImage": "projects/Solo-leveling-home-page.PNG",
+    "images": [
+      "projects/Solo-leveling-home-page.PNG",
+      "projects/Solo-leveling-about.PNG",
+      "projects/Solo-leveling-chapters.PNG",
+      "projects/Solo-leveling-chapters2.PNG",
+      "projects/Solo-leveling-characters.PNG",
+      "projects/Solo-leveling-characters2.PNG",
+      "projects/Solo-leveling-featured.PNG",
+      "projects/Solo-leveling.PNG"
+    ],
+    "details": {
+      "tagline": "An immersive manga reading experience inspired by Solo Leveling.",
+      "liveDemo": "https://raheem.onrender.com/",
+      "source": null,
+      "stack": [
+        "React",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Tailwind CSS",
+        "Custom Theming"
+      ],
+      "about": "A full-stack manga reading platform dedicated to the Solo Leveling universe. The project focuses on immersive visuals, character exploration, and smooth reading flows.\n\nThe UI is heavily themed to match anime aesthetics while maintaining readability and performance.",
+      "features": [
+        {
+          "icon": "menu_book",
+          "title": "Manga Reader",
+          "description": "Smooth chapter navigation with optimized image loading."
+        },
+        {
+          "icon": "auto_stories",
+          "title": "Character Profiles",
+          "description": "Detailed lore and character information."
+        },
+        {
+          "icon": "dark_mode",
+          "title": "Immersive Dark Mode",
+          "description": "Themed interface designed for comfortable long-form reading."
+        },
+        {
+          "icon": "bolt",
+          "title": "Fast Content Delivery",
+          "description": "Optimized backend for quick chapter loading and transition."
+        }
+      ],
+      "challenges": [
+        "Optimizing image-heavy content delivery.",
+        "Maintaining performance on long-scroll pages."
+      ],
+      "meta": {
+        "role": "Full Stack Developer",
+        "timeline": "2023",
+        "teamSize": "Solo",
+        "status": "Completed"
+      }
+    }
+  },
+
+  {
+    "id": "andrew-maciver",
+    "title": "Andrew Maciver Films",
+    "shortDescription": "Cinematic portfolio website for a film production agency.",
+    "cardTech": ["React", "UX Design", "Vercel"],
+    "homeImage": "projects/Andrew-homepage.PNG",
+    "images": [
+      "projects/Andrew-homepage.PNG",
+      "projects/Amdrew-our-vision.PNG",
+      "projects/Andrew-about-light.PNG",
+      "projects/Andrew-about.PNG",
+      "projects/Andrew-contact.PNG",
+      "projects/Andrew-lightmode.PNG",
+      "projects/Andrew-portfolio.PNG",
+      "projects/Andrew-projects.PNG",
+      "projects/Andrew-projects2.PNG"
+    ],
+    "details": {
+      "tagline": "A cinematic digital presence for a film producer.",
+      "liveDemo": "https://andrew-maciver.vercel.app/",
+      "source": null,
+      "stack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "Dark/Light Mode",
+        "Figma",
+        "Vercel"
+      ],
+      "about": "This portfolio was designed to reflect cinematic storytelling through motion, typography, and layout. It highlights premium work while maintaining a seamless browsing experience.\n\nSpecial attention was given to transitions, contrast, and theme switching.",
+      "features": [
+        {
+          "icon": "movie",
+          "title": "Cinematic UX",
+          "description": "Editorial layouts inspired by film aesthetics."
+        },
+        {
+          "icon": "brightness_6",
+          "title": "Dark / Light Mode",
+          "description": "Seamless theme switching without UX compromise."
+        },
+        {
+          "icon": "motion_photos_auto",
+          "title": "Motion Interactions",
+          "description": "Subtle animations and transitions that enhance storytelling."
+        },
+        {
+          "icon": "web",
+          "title": "Portfolio Showcase",
+          "description": "High-quality video and image integration for project display."
+        }
+      ],
+      "challenges": [
+        "Balancing heavy visuals with performance.",
+        "Maintaining brand tone across themes."
+      ],
+      "meta": {
+        "role": "Frontend & UX Designer",
+        "timeline": "2025",
+        "teamSize": "Solo",
+        "status": "Completed"
+      }
+    }
+  },
+
+  {
+    "id": "inga-ink",
+    "title": "Inga Ink – Queen’s Venom",
+    "shortDescription": "Luxury-themed e-commerce platform with a bold queen-inspired identity.",
+    "cardTech": ["React", "TypeScript", "Firebase"],
+    "homeImage": "projects/Inga-ink-homepage.PNG",
+    "images": [
+      "projects/Inga-ink-homepage.PNG",
+      "projects/Inga-ink-about.PNG",
+      "projects/Inga-ink-about2.PNG",
+      "projects/Inga-ink-account.PNG",
+      "projects/Inga-ink-cart.PNG",
+      "projects/Inga-ink-collections.PNG",
+      "projects/Inga-ink-collections2.PNG",
+      "projects/Inga-ink-favorites.PNG",
+      "projects/Inga-ink-productdetails.PNG",
+      "projects/Inga-ink-productdetails2.PNG"
+    ],
+    "details": {
+      "tagline": "A bold, high-performance e-commerce experience.",
+      "liveDemo": "https://inga-ink-queens-venom.vercel.app/",
+      "source": null,
+      "stack": [
+        "React",
+        "TypeScript",
+        "Redux",
+        "Tailwind CSS",
+        "shadCN UI",
+        "Firebase",
+        "Vercel"
+      ],
+      "about": "Inga Ink – Queen’s Venom is a fashion-forward e-commerce platform built around a strong visual identity. The project emphasizes performance, storytelling, and premium UX.\n\nAnimations and layout hierarchy were carefully crafted to elevate the brand.",
+      "features": [
+        {
+          "icon": "auto_awesome",
+          "title": "Luxury UI",
+          "description": "High-end visual styling with strong branding."
+        },
+        {
+          "icon": "speed",
+          "title": "Performance Optimized",
+          "description": "Fast load times despite rich visuals."
+        },
+        {
+          "icon": "shopping_bag",
+          "title": "Seamless Shopping",
+          "description": "Intuitive product discovery and cart management flow."
+        },
+        {
+          "icon": "favorite",
+          "title": "Wishlist Functionality",
+          "description": "Save favorite items for future purchase consideration."
+        }
+      ],
+      "challenges": [
+        "Maintaining performance with heavy branding.",
+        "Consistent UX across devices."
+      ],
+      "meta": {
+        "role": "Full Stack Developer",
+        "timeline": "2025",
+        "teamSize": "Solo",
+        "status": "In Progress"
+      }
+    }
+  },
+
+  {
+    "id": "alessa-real-estate",
+    "title": "Alessa Real Estate",
+    "shortDescription": "Portfolio and service platform for a model and real estate agent.",
+    "cardTech": ["React", "UX Design", "Vercel"],
+    "homeImage": "projects/Alessa-homepage.PNG",
+    "images": [
+      "projects/Alessa-homepage.PNG",
+      "projects/Alessa-about.PNG",
+      "projects/Alessa-contact.PNG",
+      "projects/Alessa-insights.PNG",
+      "projects/Alessa-insights2.PNG",
+      "projects/Alessa-listing.PNG",
+      "projects/Alessa-listing2.PNG",
+      "projects/Alessa-services.PNG"
+    ],
+    "details": {
+      "tagline": "A refined blend of portfolio and property listings.",
+      "liveDemo": "https://alessa-real-estate.vercel.app/",
+      "source": null,
+      "stack": [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "shadCN UI",
+        "Figma",
+        "Vercel"
+      ],
+      "about": "This project combines personal branding with real estate services. The UX highlights both visual identity and functional property listings, creating trust and credibility.\n\nDesigned with a clean, luxury-inspired layout.",
+      "features": [
+        {
+          "icon": "home",
+          "title": "Property Listings",
+          "description": "Clean presentation of featured properties."
+        },
+        {
+          "icon": "palette",
+          "title": "Luxury UX",
+          "description": "High-end visual design focused on credibility."
+        },
+        {
+          "icon": "contact_mail",
+          "title": "Lead Generation",
+          "description": "Integrated contact forms for seamless client inquiries."
+        },
+        {
+          "icon": "map",
+          "title": "Location Insights",
+          "description": "Detailed neighborhood information and property context."
+        }
+      ],
+      "challenges": [
+        "Balancing personal branding with business needs.",
+        "Information hierarchy across services."
+      ],
+      "meta": {
+        "role": "Frontend & UX Designer",
+        "timeline": "2025",
+        "teamSize": "Solo",
+        "status": "Completed"
+      }
+    }
+  },
+
+  {
+    "id": "truth-by-shaun",
+    "title": "Truth by Shaun",
+    "shortDescription": "Fitness coaching platform with paid plans and Stripe checkout.",
+    "cardTech": ["React", "Firebase", "Stripe"],
+    "homeImage": "projects/Truthbyshaun-homepage.PNG",
+    "images": [
+      "projects/Truthbyshaun-homepage.PNG",
+      "projects/Truthbyshaun-about.PNG",
+      "projects/Truthbyshaun-bookyour-session.PNG",
+      "projects/Truthbyshaun-services.PNG",
+      "projects/Truthbyshaun-services2.PNG",
+      "projects/Truthbyshaun-stayconnected.PNG",
+      "projects/Truthbyshaun-stripe.PNG"
+    ],
+    "details": {
+      "tagline": "A complete fitness business platform with payments.",
+      "liveDemo": "https://truthbyshaun.vercel.app/",
+      "source": null,
+      "stack": [
+        "React",
+        "TypeScript",
+        "Firebase",
+        "Stripe",
+        "Tailwind CSS",
+        "Vercel"
+      ],
+      "about": "Truth by Shaun is a full-stack fitness coaching platform offering paid plans, guidance, and seamless checkout.\n\nStripe integration ensures secure payments, while Firebase handles authentication and user data.",
+      "features": [
+        {
+          "icon": "payments",
+          "title": "Stripe Payments",
+          "description": "Smooth and secure checkout for fitness plans."
+        },
+        {
+          "icon": "fitness_center",
+          "title": "Fitness Programs",
+          "description": "Structured plans with clear user journeys."
+        },
+        {
+          "icon": "schedule",
+          "title": "Session Booking",
+          "description": "Integrated calendar system for scheduling training sessions."
+        },
+        {
+          "icon": "groups",
+          "title": "Community Hub",
+          "description": "Space for client engagement and success stories."
+        }
+      ],
+      "challenges": [
+        "Payment flow reliability.",
+        "Handling secure user data."
+      ],
+      "meta": {
+        "role": "Full Stack Developer",
+        "timeline": "2024",
+        "teamSize": "Solo",
+        "status": "Completed"
+      }
+    }
+  },
+
+  {
+    "id": "darren-adventures",
+    "title": "Darren Adventures",
+    "shortDescription": "Tourism and adventure platform with donations and subscriptions.",
+    "cardTech": ["React", "Stripe", "Firebase"],
+    "homeImage": "projects/Darren-homepage.PNG",
+    "images": [
+      "projects/Darren-homepage.PNG",
+      "projects/Darren-about.PNG",
+      "projects/Darren-about2.PNG",
+      "projects/Darren-contact.PNG",
+      "projects/Darren-events-withus.PNG",
+      "projects/Darren-events.PNG",
+      "projects/Darren-featured.PNG",
+      "projects/Darren-getInvolved.PNG",
+      "projects/Darren-meet-the-team.PNG",
+      "projects/Darren-podcast.PNG",
+      "projects/Darren-whatwedo.PNG",
+      "projects/Darren-whatwedo2.PNG"
+    ],
+    "details": {
+      "tagline": "Adventure services with integrated donations and subscriptions.",
+      "liveDemo": "https://darren-adventures.vercel.app/",
+      "source": null,
+      "stack": [
+        "React",
+        "TypeScript",
+        "Firebase",
+        "Stripe",
+        "Tailwind CSS",
+        "Vercel"
+      ],
+      "about": "Darren Adventures is a service-based platform offering guided tours, adventure plans, and donation-based support.\n\nStripe was integrated for both one-time donations and subscription services.",
+      "features": [
+        {
+          "icon": "explore",
+          "title": "Adventure Services",
+          "description": "Tour, hiking, and guided experience offerings."
+        },
+        {
+          "icon": "volunteer_activism",
+          "title": "Donations & Subscriptions",
+          "description": "Stripe-powered payment flows."
+        },
+        {
+          "icon": "event",
+          "title": "Event Calendar",
+          "description": "Upcoming adventure dates and booking availability."
+        },
+        {
+          "icon": "podcasts",
+          "title": "Podcast Integration",
+          "description": "Embedded episodes sharing adventure stories and tips."
+        }
+      ],
+      "challenges": [
+        "Handling multiple payment models.",
+        "Clear UX for service discovery."
+      ],
+      "meta": {
+        "role": "Full Stack Developer",
+        "timeline": "2025",
+        "teamSize": "Solo",
+        "status": "In Progress"
+      }
+    }
+  }
+]
